@@ -76,7 +76,7 @@ Streaming platforms use content recommendation algorithms to suggest movies, sho
 - **$O(log n)$**: **Logarithmic time** – The algorithm's runtime grows logarithmically as the input size increases.
   - **Example**: [Binary search](https://www.geeksforgeeks.org/binary-search/) in a sorted array.
 
-- **O(n log n)**: **Log-linear time** – A combination of linear and logarithmic growth.
+- **$O(n log n)$**: **Log-linear time** – A combination of linear and logarithmic growth.
   - **Example**: Merge sort or quicksort.
 
 ### **Space Complexity**
@@ -89,8 +89,8 @@ Streaming platforms use content recommendation algorithms to suggest movies, sho
 ### **Real-World Use Cases**
 
 - **Sorting Algorithms**:
-  - **O(n^2)**: [Bubble sort](https://www.geeksforgeeks.org/bubble-sort-algorithm/), [Insertion sort](https://www.geeksforgeeks.org/insertion-sort-algorithm/). Useful for small datasets but inefficient for larger ones.
-  - **O(n log n)**: [Merge sort](https://www.geeksforgeeks.org/merge-sort/), [Quick sort](https://www.geeksforgeeks.org/quick-sort-algorithm/). These are much more efficient for large datasets.
+  - **$O(n^2)$**: [Bubble sort](https://www.geeksforgeeks.org/bubble-sort-algorithm/), [Insertion sort](https://www.geeksforgeeks.org/insertion-sort-algorithm/). Useful for small datasets but inefficient for larger ones.
+  - **$O(n log n)$**: [Merge sort](https://www.geeksforgeeks.org/merge-sort/), [Quick sort](https://www.geeksforgeeks.org/quick-sort-algorithm/). These are much more efficient for large datasets.
 
 - **Searching Algorithms**:
   - **$O(1)$**: Hashmap lookup. Extremely fast and efficient.
