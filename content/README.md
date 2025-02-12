@@ -1,8 +1,8 @@
 # ![Universiteti Metropolitan Tirana](https://umt.edu.al/wp-content/uploads/2024/11/Universiteti-Metropolitan-Tirana.webp)  
 
-# Lectures
+# Lectures & Seminars
 
-Here, you'll find all the materials and resources for each week's lecture. Each lecture folder contains key topics, examples, and exercises to help you master the course content.
+Here, you'll find all the materials and resources for each week's lecture and seminar sessions. Each folder contains key topics, examples, and practical exercises to help you master the course content.
 
 ## Part 1: Foundations and Core Data Structures
 

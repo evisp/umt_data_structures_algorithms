@@ -7,8 +7,7 @@ Welcome to the **Data Structures & Algorithms** course repository! This reposito
 ## 📂 **Repository Structure**  
 
 - 📖 **[Literature](./literature/)** – Recommended readings and references  
-- 📚 **[Lectures](./lectures/)** – Presentation slides and lecture notes  
-- 📝 **[Seminars](./seminars/)** – Exercises and problem-solving sessions  
+- 📚 **[Lectures](./content/)** – Presentation slides, lecture notes, exercises and problem-solving sessions  
 - 🛠 **[Labs](./labs/)** – Hands-on coding assignments and implementations  
 - 🎓 **[Exams](./exams/)** – Midterm and final exam materials  
 
