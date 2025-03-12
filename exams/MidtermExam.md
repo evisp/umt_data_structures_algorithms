@@ -33,7 +33,7 @@ A small business needs an **inventory management system** to efficiently handle 
 2. **Use a queue** (FIFO) to process customer orders in the order they were received.  
 3. **Implement a stack** to track "undo" operations, allowing the business to reverse mistakenly placed orders.  
 4. **Enable searching and sorting:**  
-   - **Binary search** to quickly locate products by name.  
+   - **Binary search** to quickly locate products.  
    - **Merge Sort** to efficiently sort products based on price.  
 5. **Develop a recursive function** to calculate the total inventory value by summing the price of all available products.  
 
@@ -48,9 +48,9 @@ A university needs a **course registration system** to handle student enrollment
    - **Queue for waitlisted students** (FIFO) to ensure fair order when a spot opens.  
    - **Stack for undoing** the last registration action, allowing quick corrections.  
 3. **Implement searching and sorting:**  
-   - **Binary search** to quickly locate a course by name.  
+   - **Binary search** to quickly locate a course.  
    - **Quick Sort** to organize courses based on the number of enrolled students.  
-4. **Develop a recursive function** to calculate the total number of students enrolled across all courses.  
+4. **Recursive function**:  Recursively check all courses and return the one with the most students.
 
 ---
 
@@ -63,9 +63,9 @@ A hospital requires a **patient management system** to efficiently handle patien
    - **Priority queue** to ensure patients with higher severity are treated first.  
    - **Stack** to track discharged patients, allowing the last discharge to be undone if needed.  
 3. **Implement searching and sorting:**  
-   - **Binary search** to quickly locate a patient by name.  
+   - **Binary search** to quickly locate a patient.  
    - **Merge Sort** to organize patients based on severity score.  
-4. **Develop a recursive function** to compute the average severity score of all admitted patients.  
+4. **Develop a recursive function** to check each patient and count those exceeding a severity level.
 
 ---
 
@@ -78,7 +78,7 @@ A ride-sharing platform requires a **system to manage drivers and efficiently ma
    - **Queue for pending ride requests** (FIFO) to ensure fair assignment.  
    - **Stack** to track ride cancellations, allowing the last cancellation to be undone if necessary.  
 3. **Implement searching and sorting:**  
-   - **Binary search** to quickly find a driver by name.  
+   - **Binary search** to quickly find a driver.  
    - **Quick Sort** to sort drivers based on their ratings.  
 4. **Develop a recursive function** to compute the average driver rating across the system.  
 
