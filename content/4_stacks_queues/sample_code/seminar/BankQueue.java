@@ -10,14 +10,27 @@ public class BankQueue {
     }
     
     public void addCustomerToQueue(Customer customer) {
-        // write your code here
+        customerQueue.offer(customer);
+        System.out.println(customer.getName() + " added to the queue.");
     }
     
     public void serveCustomer() {
-        // write your code here
+        if (customerQueue.isEmpty()) {
+            System.out.println("No customers in queue.");
+            return;
+        }
+        Customer served = customerQueue.poll();
+        System.out.println("Serving customer: " + served.getName());
     }
     
     public void printQueue() {
-        // write your code here
+        if (customerQueue.isEmpty()) {
+            System.out.println("The queue is empty.");
+            return;
+        }
+        System.out.println("Current queue:");
+        for (Customer c : customerQueue) {
+            System.out.println("- " + c.getName());
+        }
     }
 }
