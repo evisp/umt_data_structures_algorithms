@@ -64,7 +64,7 @@ A hospital requires a **patient management system** to efficiently handle patien
    - **Stack** to track discharged patients, allowing the last discharge to be undone if needed.  
 3. **Implement searching and sorting:**  
    - **Binary search** to quickly locate a patient.  
-   - **Merge Sort** to organize patients based on severity score.  
+   - **Selection Sort** to organize patients based on severity score.  
 4. **Develop a recursive function** to check each patient and count those exceeding a severity level.
 
 ---
@@ -79,7 +79,7 @@ A ride-sharing platform requires a **system to manage drivers and efficiently ma
    - **Stack** to track ride cancellations, allowing the last cancellation to be undone if necessary.  
 3. **Implement searching and sorting:**  
    - **Binary search** to quickly find a driver.  
-   - **Quick Sort** to sort drivers based on their ratings.  
+   - **Merge Sort** to sort drivers based on their ratings.  
 4. **Develop a recursive function** to compute the average driver rating across the system.  
 
 ---
@@ -88,5 +88,4 @@ A ride-sharing platform requires a **system to manage drivers and efficiently ma
 - Code should be **fully functional** with **comments explaining logic**.  
 - A **short report (1-2 pages)** explaining your implementation, challenges, and Big-O complexity of key operations.  
 - If needed, you may prepare a **short presentation (a few slides)** to help explain your work during the exam.  
-
 ---
