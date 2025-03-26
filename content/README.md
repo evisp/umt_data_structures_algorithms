@@ -22,6 +22,20 @@ Overview of arrays and linked lists, covering their structures, operations, and 
 
 [Click here to access Week 3 materials](./3_arrays_linkedlists)  
 
+✅ Week 4: Stacks and Queues
+Explore stacks and queues, their operations, and how they are used in solving problems.
+
+[Click here to access Week 3 materials](./4_stacks_queues/)  
+
+✅ Week 5: Searching and Sorting Algorithms
+Learn about common searching and sorting algorithms and their time complexities.
+
+[Click here to access Week 3 materials](./5_searching_sorting/)  
+
+✅ Week 6: Recursion
+Dive into recursive functions and understand how recursion can simplify problem-solving in many scenarios.
+
+[Click here to access Week 3 materials](./6_recursion/)  
 
 ### Future Lectures: Coming Soon!  
 Stay tuned for the upcoming lectures! They will cover a range of exciting topics related to data structures, algorithms, and much more. You'll find everything here as it becomes available.
