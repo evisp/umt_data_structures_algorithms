@@ -1,3 +1,6 @@
+# ![Universiteti Metropolitan Tirana](https://umt.edu.al/wp-content/uploads/2024/11/Universiteti-Metropolitan-Tirana.webp)  
+
+
 # Mock Interview Questions
 
 ## **True or False Statements**  
@@ -41,6 +44,12 @@ public static int binarySearch(int[] arr, int target) {
 }
 ```
 
+### Code Issues
+
+1. Incorrect termination condition: `right = arr.length` should be `right = arr.length - 1` to avoid accessing out-of-bounds indices.
+2. Incorrect update of right: `right = mid - 1` should be in the case where `arr[mid] > target`, but it's placed in the wrong condition. It should be swapped with `left = mid + 1`.
+3. Off-by-one error in loop condition: `while (left < right)` should be `while (left <= right)` to ensure all elements are checked.
+
 ### Selection Sort
 
 The provided selection sort algorithm is designed to sort an array of integers in ascending order. Review the code for any logical or syntactical issues that could prevent it from working correctly.
@@ -62,6 +71,12 @@ class SelectionSort {
 }
 
 ```
+
+### Code Issues
+
+1. Incorrect initialization of minIndex: `minIndex = 0` should be `minIndex = i`, as the minimum should be searched from the current index onward.
+2. Out-of-bounds error in inner loop: `j <= arr.length` should be `j < arr.length`, since accessing `arr[arr.length]` results in an `ArrayIndexOutOfBoundsException`.
+3. Incorrect swapping logic: `arr[i] = arr[minIndex]` is overwritten before swapping. A temporary variable should be used for swapping.
 
 ### Linked List
 
@@ -139,6 +154,18 @@ public class LinkedListTest {
     }
 }
 ```
+
+### Code Issues
+
+#### Task 1: `addToEnd` Method Issues
+1. Incorrect handling of an empty list: If `head == null`, 
+the method should set `head = newNode` instead of returning immediately.
+2. Incorrect node assignment: `temp = newNode`; only updates the local variable, not the actual linked list. It should be `temp.next = newNode`;.
+
+#### Task 2: `removeAtBeginning` Method Issues
+1. Missing return after empty list check: If `head == null`, the method should return immediately instead of proceeding.
+2. Null pointer exception: If `head.next == null` (i.e., the list has only one node), `head.next.value` would cause an error. Instead, the method should correctly handle removing the last remaining node by setting `head = null`.
+3. Unnecessary value copying: Instead of modifying `head.value`, simply update head to head.next
 ---
 
 ## Explain like I am 5
@@ -182,6 +209,20 @@ public class LinkedListTest {
   - The array `nums` will have distinct elements.
   - Time complexity should be O(n) and space complexity should be O(1) if possible.
 
+### Model Solution
+```java
+public static int findMissingNumber(int[] nums) {
+        int n = nums.length + 1;            // Since one number is missing
+        int expectedSum = n * (n + 1) / 2;  // Sum of first n natural numbers
+        int actualSum = 0;
+
+        for (int num : nums) {
+            actualSum += num;
+        }
+
+        return expectedSum - actualSum;     // The missing number
+    }
+```
 ---
 
 ### 2. **Reverse an Array**
@@ -207,6 +248,26 @@ public class LinkedListTest {
   - The array may contain both positive and negative integers.
   - You must perform the reversal in-place (without using extra arrays or lists).
 
+### Model Solution
+
+```java
+public static void reverseArray(int[] nums) {
+    int left = 0, right = nums.length - 1;
+
+    // Swap elements from both ends until the pointers meet in the middle
+    while (left < right) {
+        // Swap nums[left] and nums[right]
+        int temp = nums[left];
+        nums[left] = nums[right];
+        nums[right] = temp;
+
+        // Move pointers inward
+        left++;
+        right--;
+    }
+}
+
+```
 ### 3. **Sum of Elements in an Array (Recursive)**
 
 - **Problem Description:**  
@@ -225,6 +286,20 @@ public class LinkedListTest {
 - **Example 2:**  
   Input: `nums = [10, 20, 30]`  
   Output: `60`
+
+### Model Solution
+
+```java
+public static int sumArray(int[] nums, int index) {
+    // Base case: If index is out of bounds, return 0
+    if (index == nums.length) {
+        return 0;
+    }
+    // Recursive case: Add current element to sum of remaining elements
+    return nums[index] + sumArray(nums, index + 1);
+}
+
+```
 
 ---
 
@@ -247,6 +322,18 @@ public class LinkedListTest {
   Input: `nums = [10, 20, 15, 7]`  
   Output: `20`
 
+### Model Solution
+
+```java
+public static int findMax(int[] nums, int index) {
+    // Base case: If there's only one element left, return it
+    if (index == nums.length - 1) {
+        return nums[index];
+    }
+    // Recursive case: Compare current element with max of the rest
+    return Math.max(nums[index], findMax(nums, index + 1));
+}
+```
 ---
 
 ## Algorithm Battles (Group Debate)
@@ -260,6 +347,20 @@ Each group must present a compelling argument for why their assigned sorting alg
 - **Group 1:** Defend **Quick Sort**  
 - **Group 2:** Defend **Merge Sort**
 
+### **Merge Sort vs Quick Sort Debate Table**  
+
+| Aspect         | Quick Sort  | Merge Sort  |  
+|--------------|--------------|--------------|  
+| **Best Case Time Complexity** | **O(n log n)** (Already sorted or nearly sorted) | **O(n log n)** (Always same) |  
+| **Worst Case Time Complexity** | **O(n²)** (When pivot choice is bad) | **O(n log n)** (Always same) |  
+| **Average Case Time Complexity** | **O(n log n)** (Efficient for most cases) | **O(n log n)** (Stable performance) |  
+| **Space Complexity** | **O(log n)** (In-place sorting) | **O(n)** (Needs extra space) |  
+| **Stability** | Not stable (Relative order may change) | Stable (Preserves order of equal elements) |  
+| **Best Use Cases** | Large datasets, in-place sorting, faster for random data | Linked lists, large datasets with external storage |  
+| **Drawbacks** | Worst case O(n²), not stable | Needs extra memory, slower for small data |  
+
+- **Quick Sort** is faster for most cases and works in-place.  
+- **Merge Sort** is more predictable and stable but uses more memory.
 ---
 
 ## Speed Coding Challange
@@ -273,6 +374,30 @@ Each group must present a compelling argument for why their assigned sorting alg
   - **Example Input**: `"madam"`, **Example Output**: `true`
   - **Example Input**: `"hello"`, **Example Output**: `false`
 
+### Model Solution
+```java
+public static boolean isPalindrome(String str) {
+    // Convert to lowercase
+    str = sts.toLowerCase();
+    return isPalindromeRecursive(str, 0, str.length() - 1);
+}
+
+private static boolean isPalindromeRecursive(String str, int left, int right) {
+    // Base case: If left and right pointers cross, it's a palindrome
+    if (left >= right) {
+        return true;
+    }
+
+    // Compare characters at left and right pointers
+    if (str.charAt(left) != str.charAt(right)) {
+        return false;  // Not a palindrome if characters don't match
+    }
+
+    // Recurse with next pair of characters
+    return isPalindromeRecursive(str, left + 1, right - 1);
+}
+
+```
 ### **Sum of Digits**
 - **Task**: Write a function that takes an integer and returns the sum of its digits.
 - **Requirements**:
@@ -282,6 +407,20 @@ Each group must present a compelling argument for why their assigned sorting alg
   - **Example Input**: `1234`, **Example Output**: `10` (1 + 2 + 3 + 4 = 10)
   - **Example Input**: `987`, **Example Output**: `24` (9 + 8 + 7 = 24)
 
+### Model Solution
+
+```java
+public static int sumOfDigits(int num) {
+    // Base case: If number is 0, return 0
+    if (num == 0) {
+        return 0;
+    }
+
+    // Recursive case: Add last digit and recurse with the remaining number
+    return num % 10 + sumOfDigits(num / 10);
+}
+
+```
 ---
 
 
