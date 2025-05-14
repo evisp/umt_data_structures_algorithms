@@ -1,21 +1,11 @@
 public class City {
     private String name;
-    private int x, y;
 
-    public City(String name, int x, int y) {
+    public City(String name) {
         this.name = name;
-        this.x = x;
-        this.y = y;
     }
 
     public String getName() { return name; }
-
-    public int getX() { return x; }
-    public int getY() { return y; }
-
-    public double distanceTo(City other) {
-        return Math.sqrt(Math.pow(this.x - other.x, 2) + Math.pow(this.y - other.y, 2));
-    }
 
     @Override
     public boolean equals(Object o) {
