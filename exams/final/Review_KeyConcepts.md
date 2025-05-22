@@ -31,11 +31,6 @@ Total Points
 
 ### True / False Questions (with concise explanations)
 
-Absolutely! Here are **5 clear, focused True/False questions with explanation prompts** for your **True / False with Explanation** section, covering key concepts:
-
----
-
-### True / False with Explanation — Sample Questions
 
 Mark the following statements as `True` or `False`. Provide a concise explanation (1 - 2 sentences)
 
