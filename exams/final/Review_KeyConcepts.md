@@ -277,3 +277,59 @@ Function Partition(_______________)
 
 ```
 --- 
+
+### Data Structure Selection for Use Cases
+
+#### Efficient Undo/Redo in a Text Editor
+
+A text editor needs to support undo and redo operations efficiently, where users can revert their last actions or reapply undone actions in order. The operations should be performed quickly without scanning the entire history.
+
+Which data structure(s) would you use to implement this functionality? Explain your choice.
+
+#### Real-Time Task Scheduling System
+
+You are designing a system that manages tasks with different priorities. Tasks arrive continuously, and the system must always execute the highest priority task available next. Tasks with the same priority should be executed in the order they arrived.
+
+What data structure(s) will you use to implement this scheduler? Justify your answer.
+
+#### Web Browser History Navigation
+
+A web browser records the pages visited by a user. The user can go back to previously visited pages and then forward again, as long as no new page is visited after going back.
+
+Which data structure(s) would best support this navigation behavior and why?
+
+#### Autocomplete Suggestions for a Search Engine
+
+You are implementing an autocomplete feature that suggests possible query completions as the user types. The data structure must support fast prefix searches and efficient insertions of new terms.
+
+What data structure(s) would you choose to implement autocomplete? Explain your reasoning.
+
+#### Social Network Friend Recommendation
+
+In a social networking app, you want to efficiently find “friends of friends” for friend suggestions. The data structure should quickly handle queries about connections between users.
+
+Which data structure(s) would be appropriate for modeling and querying this data? Explain.
+
+### Coding Problems (LeetCode-style)
+
+#### Merge Two Sorted Linked Lists
+Given two singly linked lists sorted in ascending order, merge them into a single sorted linked list and return the head.
+
+- Implement the function (or pseudocode) `ListNode mergeTwoLists(ListNode l1, ListNode l2)`
+- Consider edge cases where one or both lists are empty.
+
+#### Validate Binary Search Tree
+Given the root of a binary tree, determine if it is a valid Binary Search Tree (BST). A BST must satisfy the property that `left subtree nodes < node < right subtree nodes` for every node.
+
+- Implement `boolean isValidBST(TreeNode root)`
+- Think carefully about edge cases like duplicate values or `null` nodes.
+
+#### Find the kth Smallest Element in a BST
+Given a BST, return the `kth` smallest element in the tree.
+- Implement int `kthSmallest(TreeNode root, int k)`
+- Consider time and space efficiency.
+
+####  Check if Graph is Connected (Undirected)
+Given an undirected graph, determine if it is connected (there is a path between every pair of nodes).
+- Input: Number of vertices `n`, edge list
+- Use DFS or BFS to check connectivity.
