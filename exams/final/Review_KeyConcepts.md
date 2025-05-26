@@ -29,7 +29,7 @@ Total Points
 
 ## Example of Questions
 
-### True / False Questions (with concise explanations)
+### 1. True / False Questions (with concise explanations)
 
 
 Mark the following statements as `True` or `False`. Provide a concise explanation (1 - 2 sentences)
@@ -44,3 +44,132 @@ Mark the following statements as `True` or `False`. Provide a concise explanatio
 
 5. Dijkstra’s algorithm can be used to find the shortest path in graphs with negative edge weights.
 
+---
+
+
+### 2. Code Output
+
+Analyze and trace the following code snippets. **What is the output?**. Provide a concise explanation
+
+```java
+List<String> algorithms = new ArrayList<>();
+algorithms.add("DFS");
+algorithms.add("BFS");
+algorithms.add("Dijkstra");
+
+Stack<String> stack = new Stack<>();
+for (String alg : algorithms) {
+    stack.push(alg);
+}
+stack.pop();
+stack.push("A*");
+
+while (!stack.isEmpty()) {
+    System.out.print(stack.pop() + " ");
+}
+```
+
+```java
+Queue<String> queue = new LinkedList<>();
+queue.offer("Array");
+queue.offer("LinkedList");
+queue.offer("Heap");
+
+Stack<String> stack = new Stack<>();
+while (!queue.isEmpty()) {
+    String ds = queue.poll();
+    if (!ds.equals("LinkedList")) {
+        stack.push(ds);
+    }
+}
+
+while (!stack.isEmpty()) {
+    System.out.print(stack.pop() + " ");
+}
+```
+
+```java
+List<String> list = new ArrayList<>();
+list.add("QuickSort");
+list.add("MergeSort");
+list.add("HeapSort");
+
+Stack<String> stack = new Stack<>();
+stack.push(list.remove(1));  
+
+Queue<String> queue = new LinkedList<>();
+queue.offer(list.remove(0)); 
+
+list.add("Bubble Sort");
+queue.offer("Selection Sort");
+
+System.out.println(stack.peek() + " " + queue.peek() + " " + list.get(0));
+```
+
+---
+
+
+### 3. Key Concepts: Trees and Graphs
+
+#### Trees
+
+##### Tree Traversals
+
+
+Consider the following tree, and briefly answer the questions
+```
+           Root
+         /      \
+       Alpha    Beta
+      /    \       \
+   Gamma  Delta    Omega
+```
+
+
+- List the nodes visited in a *preorder* and *postorder* traversal.
+- A custom traversal visits:
+    - Right child
+    - Node itself
+    - Left child  
+  Write the sequence of nodes visited using this traversal.  
+  Explain how your answer differs from standard in-order.
+- Given the following:
+    - Inorder: D B E A F C
+    - Preorder: A B D E C F  
+  Draw the binary tree represented by these traversals.
+- You insert the values `{50, 30, 70, 20, 40, 60, 80}` into an empty BST (in that order).  
+  What is the inorder traversal of the resulting BST?  
+  Why is this traversal significant in BSTs?
+
+
+##### Structural Properties
+
+- What is the height of the tree?  
+  Explain briefly how it is calculated.
+- What is the difference between height and depth in a tree?
+- Which nodes are leaves? Which are internal nodes? List them separately.
+
+
+##### Insertion & Deletion Logic
+
+- Suppose you delete a node from a BST that has two children.  
+  Describe how the BST property is maintained after deletion.  
+  What do we replace the deleted node with?
+- You insert values `{40, 20, 60, 10, 30, 50, 70}` into an empty BST.  
+  Then, you delete `60`. Which node replaces `60`, and why?
+
+##### Logical Reasoning & Edge Cases
+
+- **True or False**: In any binary tree, the number of nodes is always greater than the height.  
+  Justify with a counterexample or explanation.
+- **True or False**: A balanced BST always has the minimum possible height.  
+  Explain your reasoning. Provide a counterexample if false.
+- **True or False**: In a BST, the depth of the leftmost node is always equal to the height of the tree.  
+  Justify your answer with an example.
+- You are repeatedly inserting sorted values (e.g., `{10, 20, 30, 40, 50}`) into a regular BST.  
+  What structural issue might arise, and how would it affect performance?
+- A student claims that `The maximum value in any BST must be in the leftmost node.`  
+  Is this correct? If not, what is the correct statement and why?
+- If a BST has height `h`, what is the worst-case time complexity of searching for a value?
+- How can a binary search tree (BST) help in speeding up search operations compared to an unsorted array?  
+  Give a short explanation using time complexity.
