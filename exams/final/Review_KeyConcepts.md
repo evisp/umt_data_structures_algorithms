@@ -173,3 +173,107 @@ Consider the following tree, and briefly answer the questions
 - If a BST has height `h`, what is the worst-case time complexity of searching for a value?
 - How can a binary search tree (BST) help in speeding up search operations compared to an unsorted array?  
   Give a short explanation using time complexity.
+
+
+####  Graphs
+
+##### Fundamental Properties of Graphs
+
+Consider the following undirected graph representing cities connected by roads:
+
+```
+[A]-----3-----[B]
+ |             |
+ 2             4
+ |             |
+[D]-----1-----[C]
+ |
+ 5
+[E]
+```
+
+- Represent the graph using:
+    - an **adjacency list**
+    - an **adjacency matrix**
+- What is the degree of node `A`?
+- Is the graph fully connected? Justify your answer.
+- Which node, if removed, would disconnect the graph? Explain your reasoning.
+- Which node is most `central` in terms of connectivity? Do you think that concept might  matter in road networks?
+- If we want to place an emergency facility (e.g., a hospital) in one city to minimize maximum travel distance to others, which city is the best candidate? Why?
+- List the order of nodes visited in **Depth-First Search (DFS)** starting from node A.
+- List the order of nodes visited in **Breadth-First Search (BFS)** starting from node A.
+- Suppose the weights represent distances in kilometers.  
+  Use **Dijkstra’s algorithm** to compute the shortest path from A to all other nodes.  
+  Provide the final distance table.
+- Which traversal (DFS or BFS) is more suitable for finding the shortest path in **unweighted** graphs? Why?
+
+##### Graph Algorithms
+
+- Using Dijkstra’s algorithm, fill in the distance table for computing the shortest paths from A to all other nodes.
+- What is the main difference between Dijkstra’s and A in terms of node selection during traversal?*
+- Why does Dijkstra's algorithm always choose the node with the smallest known distance? How does this ensure optimality?
+- What is the role of the `f(n) = g(n) + h(n)` function in `A*`? Briefly describe each term.
+- Can `A*` produce a non-optimal path? Under what condition(s)?
+- Can Dijkstra's algorithm be seen as a special case of `A*`? Explain using the f-score formula.
+- You have limited memory and don't care about exact shortest paths. Would you prefer Dijkstra’s or `A*`? Justify your answer.
+
+---
+
+### 4. Key Algorithms (Pseudocode + Complexity)
+
+#### Binary Search Tree (BST) Search
+- Write pseudocode to search for a key `k` in a BST. 
+- Clearly describe base case, recursive step, and return logic.
+- What is the best- and worst-case time complexity? Under what conditions does each occur?
+
+#### BFS Traversal of a Graph
+
+- Complete the pseudocode for BFS using a queue and visited set
+```
+Function BFS(Graph G, StartNode s)
+    create empty queue Q
+    mark s as visited
+    enqueue s onto Q
+
+    while Q is not empty do
+        _______ ← dequeue a node u
+        for each neighbor v of u do
+            if v not visited then
+                _______
+                _______
+
+```
+- Explain the time complexity in terms of `V` (vertices) and `E` (edges).
+
+#### Reversing an Array
+
+- Write pseudocode to reverse an array. Briefly describe your strategy
+- What is the time and space complexity? Explain.
+
+#### Binary Search Algorithm
+
+- Write pseudocode for binary search on a sorted array. You may write an iterative
+or a recursive function
+- What is the time complexity? Why is it better than linear search for sorted arrays?
+
+#### Merge Sort Algorithm
+
+- What is the key idea of the merge sort algorithm. Highlight the key steps as pseudocode
+- Clearly indicate recursive calls and the merge process.
+- What is the time complexity in best, average, and worst cases? Why is it preferred over simpler sorts for large datasets?
+
+#### Quick Sort Algorithm
+- Complete the pseudocode for the Partition step in Quick Sort using pivot:
+```
+Function Partition(_______________)
+    pivot ← arr[high]
+    i ← low - 1
+    for j ← low to high - 1 do
+        if _______________then
+            i ← i + 1
+            swap arr[i] and arr[j]
+    _______________
+    return _______________
+
+```
+--- 
