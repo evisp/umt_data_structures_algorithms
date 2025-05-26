@@ -278,7 +278,7 @@ Function Partition(_______________)
 ```
 --- 
 
-### Data Structure Selection for Use Cases
+### 5. Data Structure Selection for Use Cases
 
 #### Efficient Undo/Redo in a Text Editor
 
@@ -310,7 +310,7 @@ In a social networking app, you want to efficiently find â€œfriends of friendsâ€
 
 Which data structure(s) would be appropriate for modeling and querying this data? Explain.
 
-### Coding Problems (LeetCode-style)
+### 6. Coding Problems (LeetCode-style)
 
 #### Merge Two Sorted Linked Lists
 Given two singly linked lists sorted in ascending order, merge them into a single sorted linked list and return the head.
